@@ -25,18 +25,16 @@ namespace WebStore
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<WebStoreContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConection")));
-
+           
             services.AddTransient<IValuesService, ValuesClient>();
 
             services.AddTransient<WebStoreContextInitializer>();
 
-            services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
+            //services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
             //services.AddSingleton<IProductData, InMemoryProductData>();
-            services.AddScoped<IProductData, SqlProductData>();
-            services.AddScoped<ICartService, CookieCartService>();
-            services.AddScoped<IOrderService, SqlOrdersService>();
+            //services.AddScoped<IProductData, SqlProductData>();
+            //services.AddScoped<ICartService, CookieCartService>();
+            //services.AddScoped<IOrderService, SqlOrdersService>();
 
             services.AddIdentity<User, IdentityRole>(options =>
                 {
