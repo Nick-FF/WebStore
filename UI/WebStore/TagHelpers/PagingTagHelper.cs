@@ -44,7 +44,7 @@ namespace WebStore.TagHelpers
         {
             var li = new TagBuilder("li");
             var a = new TagBuilder("a");
-
+            //корректировка урок 8 2:06 аинхронная загрузка товара при переключении страниц
             if (PageNumber == PageModel.PageNumber)
             {
                 a.MergeAttribute("data-page", PageModel.PageNumber.ToString());

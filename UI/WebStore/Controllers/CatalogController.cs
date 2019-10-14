@@ -70,11 +70,11 @@ namespace WebStore.Controllers
                     Brand = product.Brand?.Name
                 });
         }
-
+        //урок 8 асинхронное обновление товаров время 2:14
         public async Task<IActionResult> GetFiltredItems(int? SectionId, int? BrandId, int Page = 1)
         {
             var products = GetProducts(SectionId, BrandId, Page);
-            await Task.Delay(2000);
+            await Task.Delay(1500);
             return PartialView("Partial/_FeaturesItems", products);
         }
 

@@ -24,7 +24,7 @@
                                     <img src="~/images/home/@($"gallery{product_index}").jpg" alt="" />
                                     <h2>@rnd.Next(10,100).ToString("C")</h2>
                                     <p>Товар @product_index</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                    <a href="#" class="btn btn-default add-to-cart" asp-append-version="true"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                 </div>
                             </div>
                         </div>
