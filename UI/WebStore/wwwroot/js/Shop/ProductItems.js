@@ -37,7 +37,8 @@
 						.parent().addClass("active");
 				})
 				.fail(() => {
-					console.log("clickOnPage getItems error");
+                    console.log("clickOnPage getItems error");
+                    $('#itemsContainer').LoadingOverlay('hide');
 				});
 		}
 	}
